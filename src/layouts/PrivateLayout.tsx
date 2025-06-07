@@ -1,11 +1,12 @@
 import { Box } from '@mui/material'
-const PrivateLayout = () =>
-{
-    return(
+import { Outlet } from 'react-router-dom'
+
+const PrivateLayout = () => {
+    return (
         <Box>
-            Vasya
+            <Outlet />
         </Box>
-    );
+    )
 }
 
-export default PrivateLayout;
+export default PrivateLayout

@@ -27,7 +27,7 @@ const lightTheme = createTheme({
     h2: { fontSize: '1.75rem', fontWeight: 700, color: '#2f3e4d' },
     h3: { fontSize: '1.5rem', fontWeight: 600, color: '#2f3e4d' },
     body1: { fontSize: '1rem', color: '#2f3e4d' },
-    body2: { fontSize: '0.875rem', color: '#4d5969' },
+    body2: { fontSize: '1rem', color: '##ffffff' },
     button: { fontWeight: 600 }, 
   },
   components: {
@@ -36,8 +36,8 @@ const lightTheme = createTheme({
         root: {
           textTransform: 'none',
           borderRadius: '5px',
-          paddingLeft: '10px',
-          paddingRight: '10px',
+          paddingLeft: '15px',
+          paddingRight: '15px',
           paddingTop: '5px',
           paddingBottom: '5px',
           fontWeight: 500,

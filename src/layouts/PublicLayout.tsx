@@ -1,12 +1,14 @@
-import PublicAppBar from '../components/PublicAppBar';
-import Container from '@mui/material/Container';
-import { Outlet } from 'react-router-dom';
+import PublicAppBar from "../components/PublicAppBar";
+import Container from "@mui/material/Container";
+import { Outlet } from "react-router-dom";
+import WelcomeBanner from "../components/WelcomeHeroSection";
 
 const PublicLayout = () => {
   return (
     <>
       <PublicAppBar />
       <Container maxWidth="xl" sx={{ mt: 4 }}>
+        <WelcomeBanner/>
         <Outlet />
       </Container>
     </>
