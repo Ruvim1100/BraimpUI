@@ -1,7 +1,15 @@
 {
-  "welcome": "Bine ai venit la Braimp",
+  "welcome": "Bun venit la Braimp",
   "description": "Învață, creează și distribuie cursuri cu ușurință.",
-  "about": "Despre",
-  "features": "Caracteristici",
-  "signIn": "Autentificare"
+  "features": "Funcționalități",
+  "signIn": "Autentificare",
+  "platformSubtitle": "O platformă pentru învățarea modernă",
+  "aboutPlatform": "Lansează cursuri online de orice nivel și dimensiune cu platforma noastră. Rapid. Ușor. Eficient. Încearcă gratuit chiar acum!",
+  "qualityFirst": "Calitatea educației este prioritatea noastră principală",
+  "tryFree": "Încearcă gratuit",
+  "bookDemo": "Explorează platforma",
+  "howItWorks": "Cum funcționează",
+  "aiFunctions": "Instrumente AI",
+  "pricing": "Tarife",
+  "about": "Despre noi"
 }

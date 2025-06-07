@@ -1,7 +1,15 @@
 {
   "welcome": "Welcome to Braimp",
-  "description": "Learn, create and share courses seamlessly.",
-  "about": "About",
+  "description": "Learn, create, and share courses with ease.",
   "features": "Features",
-  "signIn": "Sign In"
+  "signIn": "Sign In",
+  "platformSubtitle": "A user-friendly platform for modern learning",
+  "aboutPlatform": "Launch online learning at any level or scale with our platform. Fast. Convenient. Effective. Try it for free today!",
+  "qualityFirst": "Quality education is our top priority",
+  "tryFree": "Try for free",
+  "bookDemo": "Explore the platform",
+  "howItWorks": "How it works",
+  "aiFunctions": "AI Tools",
+  "pricing": "Pricing",
+  "about": "About us"
 }

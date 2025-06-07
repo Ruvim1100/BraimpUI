@@ -1,63 +1,72 @@
-import { createTheme } from '@mui/material/styles';
+import { createTheme } from "@mui/material/styles";
 
 const darkTheme = createTheme({
   palette: {
-    mode: 'dark',
+    mode: "dark",
     primary: {
-      main: '#16b098',
-      contrastText: '#ffffff',
+      main: "#148f7c",
+      contrastText: "#ffffff",
     },
     secondary: {
-      main: '#149481',
-      contrastText: '#d0eeea',
+      main: "#149481",
+      contrastText: "#ffffff",
     },
     background: {
-      default: '#1e222a',  // мягкий фон
-      paper: '#252a33',    // немного светлее для карточек
+      default: "#3c4144",
+      paper: "#3c4144",
     },
     text: {
-      primary: '#f5f5f5',
-      secondary: '#b0bec5',
+      primary: "#eaeaea",
+      secondary: "#b6bfc6",
     },
-    divider: '#3a3f47',
+    divider: "#4a4f52",
   },
   typography: {
-    fontFamily: 'Roboto, Arial, sans-serif',
-    h1: { fontSize: '2rem', fontWeight: 700, color: '#f5f5f5' },
-    h2: { fontSize: '1.75rem', fontWeight: 700, color: '#f5f5f5' },
-    h3: { fontSize: '1.5rem', fontWeight: 600, color: '#f5f5f5' },
-    body1: { fontSize: '1rem', color: '#e0e0e0' },
-    body2: { fontSize: '0.875rem', color: '#b0bec5' },
+    fontFamily: "Roboto, Arial, sans-serif",
     button: { fontWeight: 600 },
   },
   components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        body: {
+          backgroundColor: "#323639",
+        },
+      },
+    },
     MuiButton: {
       styleOverrides: {
         root: {
-          textTransform: 'none',
-          borderRadius: '5px',
-          paddingLeft: '10px',
-          paddingRight: '10px',
-          paddingTop: '5px',
-          paddingBottom: '5px',
+          textTransform: "none",
+          borderRadius: 8,
+          padding: "6px 16px",
           fontWeight: 500,
+          boxShadow: "none",
+          "&:hover": {
+            boxShadow: "none",
+            backgroundColor: undefined,
+          },
+          "&:active": {
+            boxShadow: "none",
+          },
         },
       },
     },
     MuiAppBar: {
       styleOverrides: {
         root: {
-          backgroundColor: '#2c313a',
-          color: '#ffffff',
-          borderBottom: '1px solid #3a3f47',
+          backgroundColor: "#3c4144",
+          color: "#ffffff",
+          borderBottom: "none",
+          boxShadow: "none",
+          borderRadius: 0,
         },
       },
     },
     MuiPaper: {
       styleOverrides: {
         root: {
-          borderRadius: '12px',
-          backgroundColor: '#252a33',
+          borderRadius: 12,
+          backgroundColor: "#3c4144",
         },
       },
     },

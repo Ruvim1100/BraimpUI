@@ -9,7 +9,7 @@ export const LandingPage = () => {
   return (
     <Container maxWidth="xl">
       <Box>
-        <Typography variant="h3" gutterBottom>
+        <Typography variant="h3">
           {t('welcome')}
         </Typography>
         <Typography>{t('description')}</Typography>

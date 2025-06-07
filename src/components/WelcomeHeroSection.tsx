@@ -1,6 +1,6 @@
-import { Box, Typography, Button, Stack } from "@mui/material";
+import { Box, Typography, Button } from "@mui/material";
 import { useTranslation } from "react-i18next";
-import CoursesImage from "../assets/platformsnap.png"
+import CoursesImage from "../assets/platformsnap.png";
 
 const WelcomeHeroSection = () => {
   const { t } = useTranslation();
@@ -15,38 +15,70 @@ const WelcomeHeroSection = () => {
         bgcolor: "primary.main",
         borderRadius: 4,
         px: { xs: 3, md: 6 },
-        py: { xs: 4, md: 4 },
+        py: { xs: 6, md: 8 },
         color: "primary.contrastText",
-        mb: 4,
+        mb: 6,
+        gap: { xs: 4, md: 0 },
       }}
     >
-      <Box flex={1} pr={{ md: 4 }}>
-        <Typography variant="body2" sx={{fontWeight: 400, mb: 4}}>
+      <Box
+        sx={{
+          width: { xs: "100%", md: "50%" },
+          pr: { md: 6 },
+        }}
+      >
+        <Typography variant="body1" sx={{ mb: 5, lineHeight: 1}}>
           {t("qualityFirst")}
-          </Typography>
+        </Typography>
 
-        <Typography variant="h4" sx={{ fontWeight: 600, mt: 1, mb: 2 }}>
+        <Typography
+          variant="h3"
+          sx={{ fontWeight: 700, mb: 3, lineHeight: 1.3 }}
+        >
           {t("platformSubtitle")}
         </Typography>
 
-        <Typography variant="body2" sx={{ mb: 4}}>
+        <Typography variant="body1" sx={{ mb: 5, lineHeight: 1.6 }}>
           {t("aboutPlatform")}
         </Typography>
 
-        <Stack direction="row" spacing={2} flexWrap="wrap">
-          <Button variant="contained">
+        <Box display="flex" gap={2} flexWrap="wrap">
+          <Button
+            variant="contained"
+            sx={{
+              backgroundColor: "#ffffff",
+              color: "primary.main",
+              fontWeight: 600,
+              p: 2,
+              "&:hover": {
+                backgroundColor: "#f0f0f0",
+              },
+            }}
+          >
             {t("tryFree")}
           </Button>
-          <Button variant="outlined" color="inherit">
+
+          <Button
+            variant="outlined"
+            size="large"
+            color="inherit"
+            sx={{
+              borderColor: "#ffffff",
+              color: "#ffffff",
+              fontWeight: 600,
+              "&:hover": {
+                backgroundColor: "rgba(255, 255, 255, 0.1)",
+              },
+            }}
+          >
             {t("bookDemo")}
           </Button>
-        </Stack>
+        </Box>
       </Box>
 
       <Box
-        flex={1}
-        mt={{ xs: 4, md: 0 }}
         sx={{
+          width: { xs: "100%", md: "50%" },
           display: "flex",
           justifyContent: "center",
         }}
@@ -54,10 +86,12 @@ const WelcomeHeroSection = () => {
         <Box
           component="img"
           src={CoursesImage}
-          alt="Preview"
+          alt="Platform preview"
           sx={{
             maxWidth: "100%",
-            borderRadius: 5
+            height: "auto",
+            borderRadius: 5,
+            boxShadow: 3,
           }}
         />
       </Box>
