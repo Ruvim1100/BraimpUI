@@ -1,9 +1,20 @@
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
+import { Container } from "@mui/material";
+import { useTranslation } from 'react-i18next';
 
-export const LandingPage = () => (
-  <Box>
-    <Typography variant="h3" gutterBottom>Welcome to Braimp</Typography>
-    <Typography>Learn, create and share courses seamlessly.</Typography>
-  </Box>
-);
+export const LandingPage = () => {
+  const { t } = useTranslation();
+
+  return (
+    <Container maxWidth="xl">
+      <Box>
+        <Typography variant="h3" gutterBottom>
+          {t('welcome')}
+        </Typography>
+        <Typography>{t('description')}</Typography>
+      </Box>
+    </Container>
+  );
+};
+

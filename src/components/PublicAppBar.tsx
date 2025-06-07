@@ -1,31 +1,19 @@
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import { Link as RouterLink } from "react-router-dom";
 import SwitchThemeToggle from "./SwitchThemeToggle";
 import { Container } from "@mui/material";
 import LanguageMenu from "./LanguageMenu";
+import logo from "../assets/logo.png";
 
 const PublicAppBar = () => {
   return (
     <AppBar position="static" elevation={0}>
-      <Container>
+      <Container maxWidth="xl">
         <Toolbar sx={{ justifyContent: "space-between" }}>
-          <Typography
-            variant="h6"
-            component={RouterLink}
-            to="/"
-            sx={{
-              textDecoration: "none",
-              fontWeight: "bold",
-              fontSize: "1.5rem",
-              color: "text.primary",
-            }}
-          >
-            Braimp
-          </Typography>
+          <Box component="img" src={logo} alt="Braimp Logo" sx={{height: '3rem'}}/>
 
           <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
             <Button
@@ -43,18 +31,18 @@ const PublicAppBar = () => {
               Features
             </Button>
             <SwitchThemeToggle />
-            <LanguageMenu/>
+            <LanguageMenu />
             <Button
               component={RouterLink}
               to="/login"
               variant="contained"
               sx={{
-                backgroundColor: "#d0eeea", 
+                backgroundColor: "#d0eeea",
                 color: "#16b098",
-                boxShadow: 'none',  
+                boxShadow: "none",
                 "&:hover": {
                   backgroundColor: "#bee6e0",
-                  boxShadow: 'none'
+                  boxShadow: "none",
                 },
               }}
             >

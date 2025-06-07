@@ -5,7 +5,7 @@ import MenuItem from '@mui/material/MenuItem';
 import LanguageOutlinedIcon from '@mui/icons-material/LanguageOutlined';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-
+import i18n from 'i18next';
 
 const languages = [
   { code: "en", label: "English", flag: "https://flagcdn.com/us.svg" },
@@ -27,7 +27,7 @@ export default function LanguageMenu() {
 
   const handleLanguageChange = (languageCode: string) => {
     console.log('Selected language:', languageCode);
-    // Тут ты можешь добавить смену языка через i18n или другую логику
+      i18n.changeLanguage(languageCode);
     handleClose();
   };
 
