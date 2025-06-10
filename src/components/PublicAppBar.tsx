@@ -8,6 +8,7 @@ import { Container } from "@mui/material";
 import LanguageMenu from "./LanguageMenu";
 import logo from "../assets/logo.png";
 import { useTranslation } from "react-i18next";
+import { SignInButton } from "./SignInButton";
 
 const PublicAppBar = () => {
   const { t } = useTranslation();
@@ -72,22 +73,7 @@ const PublicAppBar = () => {
           <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
             <SwitchThemeToggle />
             <LanguageMenu />
-            <Button
-              component={RouterLink}
-              to="/login"
-              variant="contained"
-              sx={{
-                backgroundColor: "#d0eeea",
-                color: "#16b098",
-                boxShadow: "none",
-                "&:hover": {
-                  backgroundColor: "#bee6e0",
-                  boxShadow: "none",
-                },
-              }}
-            >
-              {t("signIn")}
-            </Button>
+            <SignInButton/>
           </Box>
         </Toolbar>
       </Container>

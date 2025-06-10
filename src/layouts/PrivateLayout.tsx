@@ -1,12 +1,17 @@
-import { Box } from '@mui/material'
-import { Outlet } from 'react-router-dom'
+import { Box } from "@mui/material";
+import { Navigate, Outlet } from "react-router-dom";
+import { useAuthUser } from "../auth/useAuthUser";
+import { paths } from "../routes/Paths";
 
 const PrivateLayout = () => {
-    return (
-        <Box>
-            <Outlet />
-        </Box>
-    )
-}
+  const { isLoading, user } = useAuthUser();
+  if (isLoading) return <div>Loading auth…</div>;
+  if (!user) return <Navigate to={paths.login} replace />;
+  return (
+    <Box>
+      <Outlet />
+    </Box>
+  );
+};
 
-export default PrivateLayout
+export default PrivateLayout;

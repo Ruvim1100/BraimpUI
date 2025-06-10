@@ -4,6 +4,7 @@ export const paths = {
   about: '/about',
   features: '/features',
   login: '/login',
+  callback: '/auth-callback',
 
   // Private
   dashboard: '/dashboard',
