@@ -1,13 +1,13 @@
-import type { RouteObject } from 'react-router-dom';
+import type { RouteObject } from "react-router-dom";
 import PrivateLayout from "../layouts/PrivateLayout";
 import { DashboardPage } from "../pages/DashboardPage";
-import {paths} from "./Paths"
+import { paths } from "./Paths";
 
 const privateRoutes: RouteObject = {
-  path: '/',
+  path: "/",
   element: <PrivateLayout />,
   children: [
-    { path: paths.dashboard, element: <DashboardPage /> },
+    { path: paths.dashboard,  element: <DashboardPage /> },
   ],
 };
 

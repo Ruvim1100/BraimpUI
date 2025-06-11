@@ -1,3 +1,3 @@
-import { useAuth } from 'react-oidc-context';
+    import { useAuth } from 'react-oidc-context';
 
-export const useAuthUser = () => useAuth();
+    export const useAuthUser = () => useAuth();

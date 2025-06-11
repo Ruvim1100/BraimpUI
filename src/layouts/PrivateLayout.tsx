@@ -5,10 +5,13 @@ import { paths } from "../routes/Paths";
 
 const PrivateLayout = () => {
   const { isLoading, user } = useAuthUser();
+
   if (isLoading) return <div>Loading auth…</div>;
-  if (!user) return <Navigate to={paths.login} replace />;
+  if (!user)     return <Navigate to={paths.landing} replace />;
+
   return (
     <Box>
+      {}
       <Outlet />
     </Box>
   );

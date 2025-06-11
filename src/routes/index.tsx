@@ -4,10 +4,7 @@ import PrivateRoutes from './PrivateRoutes'
 
 const allRoutes = [PublicRoutes, PrivateRoutes];
 
-const AppRoutes = () => {
-  const element = useRoutes(allRoutes);
-  return element;
-};
+const AppRoutes = () => useRoutes(allRoutes);
 
 const Router = () => (
   <BrowserRouter>

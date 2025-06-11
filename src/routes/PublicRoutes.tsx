@@ -1,17 +1,14 @@
-import { paths } from "./Paths";
+import type { RouteObject } from "react-router-dom";
 import PublicLayout from "../layouts/PublicLayout";
 import { LandingPage } from "../pages/LandingPage";
-import type { RouteObject } from "react-router-dom";
-import { LoginPage } from "../pages/LoginPage";
-import { CallbackPage } from "../pages/CallbackPage";
+import NotFoundPage from "../pages/NotFoundPage";
 
 const publicRoutes: RouteObject = {
   path: "/",
   element: <PublicLayout />,
   children: [
-    { path: paths.landing, element: <LandingPage /> },
-    { path: paths.login, element: <LoginPage /> },
-    { path: paths.callback, element: <CallbackPage /> },
+    { index: true, element: <LandingPage /> },
+    { path: "*", element: <NotFoundPage /> },
   ],
 };
 
