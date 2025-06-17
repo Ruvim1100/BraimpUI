@@ -15,7 +15,6 @@ export const useCategories = () => {
     (async () => {
       try {
         const data = await getCategories(axiosPrivate);
-              console.log("Fetched categories:", data);
         if (isMounted) setCategories(data);
       } catch (err: any) {
         if (isMounted) setError(err);

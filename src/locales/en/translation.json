@@ -12,5 +12,10 @@
   "aiFunctions": "AI Tools",
   "pricing": "Pricing",
   "about": "About us",
-  "signOut": "Sign Out"
+  "signOut": "Sign Out",
+  "recommended": "Recommended",
+  "myLearning": "My Learning",
+  "courseStudio": "Course Studio",
+  "continue": "Continue",
+  "noEnrolledCourses": "You are not enrolled in any course."
 }

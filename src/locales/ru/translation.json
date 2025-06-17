@@ -12,5 +12,10 @@
   "aiFunctions": "AI-инструменты",
   "pricing": "Тарифы",
   "about": "О нас",
-  "signOut": "Выйти"
+  "signOut": "Выйти",
+  "recommended": "Рекомендуемое",
+  "myLearning": "Моё обучение",
+  "courseStudio": "Редактор курсов",
+  "continue": "Продолжить",
+  "noEnrolledCourses": "Вы не зарегистрированы ни на один курс."
 }

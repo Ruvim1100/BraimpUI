@@ -12,5 +12,10 @@
   "aiFunctions": "Instrumente AI",
   "pricing": "Tarife",
   "about": "Despre noi",
-  "signOut": "Ieși"
+  "signOut": "Ieși",
+  "recommended": "Recomandate",
+  "myLearning": "Învățarea mea",
+  "courseStudio": "Editor cursuri",
+  "continue": "Continuă",
+  "noEnrolledCourses": "Nu ești înscris la niciun curs."
 }

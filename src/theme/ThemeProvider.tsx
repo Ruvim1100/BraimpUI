@@ -15,8 +15,7 @@ export const ThemeProvider = ({ children }: Props) => {
   useEffect(() => {
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
     const handleChange = () => {
-      // You can enable this line to respect system theme:
-      // setMode(mediaQuery.matches ? 'dark' : 'light');
+      setMode(mediaQuery.matches ? 'dark' : 'light');
       setMode('light');
     };
 

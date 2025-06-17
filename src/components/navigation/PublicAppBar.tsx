@@ -25,7 +25,7 @@ const PublicAppBar = () => {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar sx={{ justifyContent: "space-between" }}>
-          <Logo/>
+          <Logo />
 
           <Box sx={{ gap: 1 }}>
             {navLinks.map(({ to, label }) => (
@@ -41,10 +41,11 @@ const PublicAppBar = () => {
           </Box>
 
           <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
-            <SwitchThemeToggle />
             <LanguageMenu />
-            <SignInButton/>
+            <SwitchThemeToggle />
+            <SignInButton />
           </Box>
+          
         </Toolbar>
       </Container>
     </AppBar>

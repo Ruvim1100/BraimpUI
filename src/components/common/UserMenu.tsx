@@ -57,7 +57,8 @@ const UserMenu = () => {
         <Box
           onClick={handleOpen}
           sx={{
-            display: "flex", alignItems: "center", gap: 1, cursor: "pointer",}}>
+            display: "flex", alignItems: "center", gap: 1, cursor: "pointer",}}
+            m={1}>
 
           <Avatar sx={{ width: 35, height: 35 }}>{avatarLetter}</Avatar>
         </Box>

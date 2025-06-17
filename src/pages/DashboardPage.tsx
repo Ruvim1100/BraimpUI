@@ -1,8 +1,8 @@
 import { Container } from "@mui/material";
-import CategoriesList from "../components/categories/CategoriesList";
+import DashboardTabs from "../components/dashboard/DashboardTabs"
 
 export const DashboardPage = () => (
   <Container maxWidth="xl">
-    <CategoriesList/>
+    <DashboardTabs/>
   </Container>
 );

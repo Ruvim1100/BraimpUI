@@ -14,7 +14,6 @@ const PrivateLayout = () => {
     <>
     <PrivateBar/>
       <Box>
-      {}
       <Outlet />
     </Box>
     </>

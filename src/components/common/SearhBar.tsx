@@ -27,6 +27,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ placeholder = "Search...", onSear
         alignItems: "center",
         width: "100%",
         maxWidth: 400,
+        maxHeight: 40,
         border: "1px solid",
         borderColor: "divider",
         borderRadius: "10px",
