@@ -1,12 +1,8 @@
-import { Box, Typography } from "@mui/material";
-import { SignOutButton } from "../components/SignOutButton";
+import { Container } from "@mui/material";
+import { CategoriesList } from "../components/categories/CategoriesList";
 
 export const DashboardPage = () => (
-  <Box>
-    <Typography variant="h3" gutterBottom>
-      Welcome to Braimp Dashboard
-    </Typography>
-    <Typography>Learn, create and die</Typography>
-    <SignOutButton />
-  </Box>
+  <Container maxWidth="xl">
+    <CategoriesList/>
+  </Container>
 );

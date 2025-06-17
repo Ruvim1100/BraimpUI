@@ -7,7 +7,7 @@ const privateRoutes: RouteObject = {
   path: "/",
   element: <PrivateLayout />,
   children: [
-    { path: paths.dashboard,  element: <DashboardPage /> },
+    { path: paths.dashboard,  element: <DashboardPage /> }
   ],
 };
 

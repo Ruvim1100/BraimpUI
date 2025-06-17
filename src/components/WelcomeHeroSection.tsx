@@ -4,7 +4,6 @@ import CoursesImage from "../assets/platformsnap.png";
 
 const WelcomeHeroSection = () => {
   const { t } = useTranslation();
-
   return (
     <Box
       sx={{

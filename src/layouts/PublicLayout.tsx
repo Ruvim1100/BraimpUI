@@ -1,4 +1,4 @@
-import PublicAppBar from "../components/PublicAppBar";
+import PublicAppBar from "../components/navigation/PublicAppBar";
 import { Container } from "@mui/material";
 import { Outlet } from "react-router-dom";
 import WelcomeBanner from "../components/WelcomeHeroSection";

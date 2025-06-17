@@ -1,17 +1,19 @@
 import { Button } from "@mui/material";
-import { useAuthUser } from '../auth/useAuthUser';
 import { useTranslation } from "react-i18next";
+import { useAuth } from "react-oidc-context";
 
 export const SignInButton = () => {
-  const { signinRedirect, isLoading, user } = useAuthUser();
+  const { signinRedirect, isLoading, user } = useAuth();
   const { t } = useTranslation();
 
   if (isLoading) return null;
   if (user) return null;
-
   return (
     <Button
-      onClick={() => signinRedirect()}
+      onClick={() => {
+        console.log("Click detected");
+        signinRedirect();
+      }}
       variant="contained"
       sx={{
         backgroundColor: "#d0eeea",

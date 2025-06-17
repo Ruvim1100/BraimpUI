@@ -1,9 +1,9 @@
 import { Button } from "@mui/material";
-import { useAuthUser } from '../auth/useAuthUser';
 import { useTranslation } from "react-i18next";
+import { useAuth } from "react-oidc-context";
 
 export const SignOutButton = () => {
-  const { signoutRedirect, isLoading, user } = useAuthUser();
+  const { signoutRedirect, isLoading, user } = useAuth();
   const { t } = useTranslation();
 
   if (isLoading || !user) return null;

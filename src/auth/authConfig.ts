@@ -1,15 +1,17 @@
-import { User, type UserManagerSettings } from 'oidc-client-ts';
+import { type UserManagerSettings } from "oidc-client-ts";
 
-export interface AppUser extends User {
-}
+const redirectUri = `${window.location.origin}/auth/callback`;
+const silentRedirectUri = `${window.location.origin}/auth/silent-renew`;
 
 export const oidcConfig: UserManagerSettings = {
-authority: "https://braimpplatform.ciamlogin.com/braimpplatform.onmicrosoft.com/",
-  client_id: "775fcf03-ff20-4233-a5d9-418d768bddd5",
-  redirect_uri: "http://localhost:5173/auth-callback",
-  post_logout_redirect_uri: "http://localhost:5173/",
-  scope: "openid profile email api://braimp-api/access_api",
-  loadUserInfo: false,
-  automaticSilentRenew: true, 
-  response_type: 'code'
+  authority: import.meta.env.VITE_OIDC_AUTHORITY,
+  client_id: import.meta.env.VITE_OIDC_CLIENT_ID,
+  redirect_uri: redirectUri,
+  silent_redirect_uri: silentRedirectUri,
+  response_type: "code",
+  scope: import.meta.env.VITE_OIDC_SCOPE,
+  extraQueryParams: { p: import.meta.env.VITE_USER_FLOW },
+  post_logout_redirect_uri: window.location.origin,
+  automaticSilentRenew: true,
+  loadUserInfo: false
 };

@@ -1,11 +1,11 @@
-import { useState } from 'react';
-import IconButton from '@mui/material/IconButton';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
-import LanguageOutlinedIcon from '@mui/icons-material/LanguageOutlined';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import i18n from 'i18next';
+import { useState } from "react";
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
+import LanguageOutlinedIcon from "@mui/icons-material/LanguageOutlined";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
+import i18n from "i18next";
+import { Button } from "@mui/material";
 
 const languages = [
   { code: "en", label: "English", flag: "https://flagcdn.com/us.svg" },
@@ -17,6 +17,9 @@ export default function LanguageMenu() {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
 
+  const currentLanguage =
+    languages.find((lang) => lang.code === i18n.language) || languages[0];
+
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
   };
@@ -26,31 +29,35 @@ export default function LanguageMenu() {
   };
 
   const handleLanguageChange = (languageCode: string) => {
-    console.log('Selected language:', languageCode);
-      i18n.changeLanguage(languageCode);
+    i18n.changeLanguage(languageCode);
     handleClose();
   };
 
   return (
     <>
-      <IconButton
+      <Button
         onClick={handleClick}
         color="inherit"
-        size="large"
+        startIcon={<LanguageOutlinedIcon />}
+        sx={{
+          "&:hover": {
+            backgroundColor: "action.hover",
+          },
+        }}
       >
-        <LanguageOutlinedIcon />
-      </IconButton>
+        {currentLanguage.label}
+      </Button>
       <Menu
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
         anchorOrigin={{
-          vertical: 'bottom',
-          horizontal: 'right',
+          vertical: "bottom",
+          horizontal: "right",
         }}
         transformOrigin={{
-          vertical: 'top',
-          horizontal: 'right',
+          vertical: "top",
+          horizontal: "right",
         }}
       >
         {languages.map((lang) => (
@@ -62,7 +69,7 @@ export default function LanguageMenu() {
               <img
                 src={lang.flag}
                 alt={lang.label}
-                style={{ width: 24, height: 16, objectFit: 'cover' }}
+                style={{ width: 24, height: 16, objectFit: "cover" }}
               />
             </ListItemIcon>
             <ListItemText>{lang.label}</ListItemText>
