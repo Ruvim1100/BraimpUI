@@ -1,5 +1,5 @@
 import { Box, CircularProgress } from "@mui/material";
-import { useCategories } from "../../hooks/useCategories";
+import { useCategories } from "../hooks/useCategories";
 
 const CategoriesList = () => {
   const { categories, loading, error } = useCategories();

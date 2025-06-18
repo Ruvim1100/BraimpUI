@@ -3,12 +3,12 @@ import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import { Link as RouterLink } from "react-router-dom";
-import SwitchThemeToggle from "../common/SwitchThemeToggle";
 import { Container } from "@mui/material";
-import LanguageMenu from "../common/LanguageMenu";
+import LanguageMenu from "../../../components/LanguageMenu";
 import { useTranslation } from "react-i18next";
-import { SignInButton } from "../common/SignInButton";
-import Logo from "../common/Logo";
+import { SignInButton } from "../../../components/SignInButton";
+import Logo from "../../../components/Logo";
+import SwitchThemeToggle from "../../../components/SwitchThemeToggle";
 
 const navLinks = [
   { to: "/howItWorks", label: "howItWorks" },

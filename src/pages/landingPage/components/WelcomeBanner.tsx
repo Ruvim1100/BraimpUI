@@ -1,8 +1,9 @@
 import { Box, Typography, Button } from "@mui/material";
 import { useTranslation } from "react-i18next";
-import CoursesImage from "../assets/platformsnap.png";
+import CoursesImage from "../../../assets/platformsnap.png"
+import { Link as RouterLink } from "react-router-dom";
 
-const WelcomeHeroSection = () => {
+const WelcomeBanner = () => {
   const { t } = useTranslation();
   return (
     <Box
@@ -43,6 +44,8 @@ const WelcomeHeroSection = () => {
 
         <Box display="flex" gap={2} flexWrap="wrap">
           <Button
+            component={RouterLink}
+            to="/dashboard"
             variant="contained"
             sx={{
               backgroundColor: "#ffffff",
@@ -98,4 +101,4 @@ const WelcomeHeroSection = () => {
   );
 };
 
-export default WelcomeHeroSection;
+export default WelcomeBanner;

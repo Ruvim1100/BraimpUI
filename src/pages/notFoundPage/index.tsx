@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { paths } from "../routes/Paths";
+import { paths } from "../../routes/Paths";
 
 const NotFoundPage = () => (
   <div style={{ textAlign: "center", padding: "4rem" }}>

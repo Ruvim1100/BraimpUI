@@ -14,10 +14,13 @@ import { useAuth } from "react-oidc-context";
 import SchoolIcon from "@mui/icons-material/School";
 import EmojiObjectsIcon from "@mui/icons-material/EmojiObjects";
 import PersonIcon from "@mui/icons-material/Person";
+import { useTranslation } from "react-i18next";
 
 
 const UserMenu = () => {
   const { user } = useAuth();
+
+  const {t} = useTranslation();
 
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
@@ -94,7 +97,7 @@ const UserMenu = () => {
           <ListItemIcon>
             <Logout fontSize="small" />
           </ListItemIcon>
-          Sign Out
+          {t("signOut")}
         </MenuItem>
       </Menu>
     </>

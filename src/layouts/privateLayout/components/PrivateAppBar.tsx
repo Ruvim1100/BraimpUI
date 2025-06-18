@@ -1,9 +1,8 @@
 import { AppBar, Box, Container, Toolbar } from "@mui/material";
-import SwitchThemeToggle from "../common/SwitchThemeToggle";
-import LanguageMenu from "../common/LanguageMenu";
-import Logo from "../common/Logo";
-import SearchBar from "../common/SearhBar";
-import UserMenu from "../common/UserMenu";
+import LanguageMenu from "../../../components/LanguageMenu";
+import Logo from "../../../components/Logo";
+import UserMenu from "../../../components/UserMenu";
+import SwitchThemeToggle from "../../../components/SwitchThemeToggle";
 
 const PrivateBar = () => {
   return (
@@ -19,14 +18,16 @@ const PrivateBar = () => {
             px: 2,
           }}
         >
-          <Box sx={{ display: "flex", alignItems: "center", gap: 3, flex: 1 }}>
+
+          <Logo />
+          {/* <Box sx={{ display: "flex", alignItems: "center", gap: 3, flex: 1 }}>
             <Logo />
             <SearchBar
               onSearch={() => {
                 throw new Error("Function not implemented.");
               }}
             />
-          </Box>
+          </Box> */}
 
           <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
             <LanguageMenu />

@@ -1,7 +1,7 @@
 import type { RouteObject } from "react-router-dom";
-import PublicLayout from "../layouts/PublicLayout";
-import { LandingPage } from "../pages/LandingPage";
-import NotFoundPage from "../pages/NotFoundPage";
+import { LandingPage } from "../pages/landingPage";
+import NotFoundPage from "../pages/notFoundPage";
+import PublicLayout from "../layouts/publicLayout";
 
 const publicRoutes: RouteObject = {
   path: "/",

@@ -1,7 +1,7 @@
 import { IconButton, Tooltip } from "@mui/material";
-import { useThemeContext } from "../../theme/ThemeContext";
 import NightlightOutlinedIcon from '@mui/icons-material/NightlightOutlined';
 import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
+import { useThemeContext } from "../theme/ThemeContext";
 
 const SwitchThemeToggle = () => {
   const { mode, toggleTheme } = useThemeContext();

@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import { Link as RouterLink } from "react-router-dom";
-import logo from "../../assets/logo.png";
+import logo from "../assets/logo.png"
 
 const Logo = () => {
   return (
