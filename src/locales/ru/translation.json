@@ -13,9 +13,30 @@
   "pricing": "Тарифы",
   "about": "О нас",
   "signOut": "Выйти",
-  "recommended": "Рекомендуемое",
-  "myLearning": "Моё обучение",
-  "courseStudio": "Редактор курсов",
-  "continue": "Продолжить",
-  "noEnrolledCourses": "Вы не зарегистрированы ни на один курс."
+
+  "learning": {
+    "recommended": "Рекомендуемое",
+    "myLearning": "Моё обучение",
+    "completedCourses": "Завершённые курсы",
+    "educationLeaders": "Лидеры обучения",
+    "continue": "Продолжить",
+    "noEnrolledCourses": "Вы не зарегистрированы ни на один курс.",
+    "tenPoint": "Десятибалльная система",
+    "hundredPoint": "Стобалльная система",
+    "fivePoint": "Пятибалльная система",
+    "letter": "Буквенная система (A–F)",
+    "openCourseForm": "Создать курс",
+    "createCourse": "Создать курс",
+    "courseTitle": "Название",
+    "courseDescription": "Описание",
+    "gradingSystem": "Система оценивания",
+    "category": "Категория",
+    "cancel": "Отмена",
+    "create": "Создать",
+    "titleRequired": "Название обязательно",
+    "categoryRequired": "Категория обязательна",
+    "failedToLoadCategories": "Не удалось загрузить категории",
+    "courseApprovalNotice": "Рассмотрение заявки на создание курса может занять до 24 часов!",
+    "descriptionRequired": "Описание обязательно"
+  }
 }

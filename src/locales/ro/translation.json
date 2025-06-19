@@ -13,9 +13,30 @@
   "pricing": "Tarife",
   "about": "Despre noi",
   "signOut": "Ieși",
-  "recommended": "Recomandate",
-  "myLearning": "Învățarea mea",
-  "courseStudio": "Editor cursuri",
-  "continue": "Continuă",
-  "noEnrolledCourses": "Nu ești înscris la niciun curs."
+
+  "learning": {
+    "recommended": "Recomandate",
+    "myLearning": "Învățarea mea",
+    "completedCourses": "Cursuri finalizate",
+    "educationLeaders": "Liderii învățării",
+    "continue": "Continuă",
+    "noEnrolledCourses": "Nu ești înscris la niciun curs.",
+    "tenPoint": "Sistemul de 10 puncte",
+    "hundredPoint": "Sistemul de 100 de puncte",
+    "fivePoint": "Sistemul de 5 puncte",
+    "letter": "Sistem de notare cu litere (A–F)",
+    "openCourseForm": "Creează curs",
+    "createCourse": "Creează curs",
+    "courseTitle": "Titlu",
+    "courseDescription": "Descriere",
+    "gradingSystem": "Sistem de notare",
+    "category": "Categorie",
+    "cancel": "Anulează",
+    "create": "Creează",
+    "titleRequired": "Titlul este obligatoriu",
+    "categoryRequired": "Categoria este obligatorie",
+    "failedToLoadCategories": "Nu s-au putut încărca categoriile",
+    "courseApprovalNotice": "Procesarea cererii de creare a cursului poate dura până la 24 de ore!",
+    "descriptionRequired": "Descriere este obligatorie"
+  }
 }

@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import CourseCard from "../assets/courseCard.png";
+import { useEffect, useState } from "react";
+import CourseCard from "../../../../assets/courseCard.png";
 import {
   Box,
   Typography,
@@ -12,11 +12,11 @@ import {
 } from "@mui/material";
 
 import { useTranslation } from "react-i18next";
-import useAxiosPrivate from "../hooks/useAxiosPrivate";
-import type { Course } from "../models/courses/course";
-import { getEnrolledCourses } from "../api/courseApi";
+import useAxiosPrivate from "../../../../hooks/useAxiosPrivate";
+import type { Course } from "../../../../models/courses/course";
+import { getEnrolledCourses } from "../../../../api/courseApi";
 
-const EnrolledCourses: React.FC = () => {
+const EnrolledCourses = () => {
   const axiosPrivate = useAxiosPrivate();
   const [courses, setCourses] = useState<Course[]>([]);
   const [loading, setLoading] = useState(true);

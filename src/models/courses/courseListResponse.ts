@@ -1,3 +1,3 @@
-export interface courseListResponce{
+export interface CourseListResponce{
     courses: []
 }

@@ -1,7 +1,8 @@
 import { Box, Typography, Button } from "@mui/material";
 import { useTranslation } from "react-i18next";
-import CoursesImage from "../../../assets/platformsnap.png"
+import CoursesImage from "../../../../assets/platformsnap.png"
 import { Link as RouterLink } from "react-router-dom";
+import { paths } from "../../../../routes/paths";
 
 const WelcomeBanner = () => {
   const { t } = useTranslation();
@@ -45,7 +46,7 @@ const WelcomeBanner = () => {
         <Box display="flex" gap={2} flexWrap="wrap">
           <Button
             component={RouterLink}
-            to="/dashboard"
+            to= {paths.learning.base}
             variant="contained"
             sx={{
               backgroundColor: "#ffffff",

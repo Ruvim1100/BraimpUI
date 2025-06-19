@@ -1,10 +1,12 @@
 import type { RouteObject } from "react-router-dom";
-import { LandingPage } from "../pages/landingPage";
 import NotFoundPage from "../pages/notFoundPage";
+import { LandingPage } from "../pages/public/landingPage";
 import PublicLayout from "../layouts/publicLayout";
+import { paths } from "./paths";
+
 
 const publicRoutes: RouteObject = {
-  path: "/",
+  path: paths.public.landing,
   element: <PublicLayout />,
   children: [
     { index: true, element: <LandingPage /> },

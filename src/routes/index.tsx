@@ -1,14 +1,16 @@
 import { BrowserRouter, useRoutes } from 'react-router-dom';
-import PublicRoutes from './PublicRoutes';
-import PrivateRoutes from './PrivateRoutes';
+import publicRoutes from './publicRoutes';
+import learningRoutes from './learningRoutes';
+import studioRoutes from './studioRoutes';
+import adminRoutes from './adminRoutes';
 
-const allRoutes = [PrivateRoutes, PublicRoutes];
+const allRoutes = [publicRoutes, learningRoutes, studioRoutes, adminRoutes];
 
 const AppRoutes = () => useRoutes(allRoutes);
 
 const Router = () => (
   <BrowserRouter>
-    <AppRoutes />;
+    <AppRoutes />
   </BrowserRouter>
 );
 

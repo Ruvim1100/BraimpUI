@@ -13,9 +13,30 @@
   "pricing": "Pricing",
   "about": "About us",
   "signOut": "Sign Out",
-  "recommended": "Recommended",
-  "myLearning": "My Learning",
-  "courseStudio": "Course Studio",
-  "continue": "Continue",
-  "noEnrolledCourses": "You are not enrolled in any course."
+
+  "learning": {
+    "recommended": "Recommended",
+    "myLearning": "My Learning",
+    "completedCourses": "Completed Courses",
+    "educationLeaders": "Education Leaders",
+    "continue": "Continue",
+    "noEnrolledCourses": "You are not enrolled in any course.",
+    "tenPoint": "10-point scale",
+    "hundredPoint": "100-point scale",
+    "fivePoint": "5-point scale",
+    "letter": "Letter grading system (A–F)",
+    "openCourseForm": "Create Course",
+    "createCourse": "Create Course",
+    "courseTitle": "Title",
+    "courseDescription": "Description",
+    "gradingSystem": "Grading System",
+    "category": "Category",
+    "cancel": "Cancel",
+    "create": "Create",
+    "titleRequired": "Title is required",
+    "categoryRequired": "Category is required",
+    "failedToLoadCategories": "Failed to load categories",
+    "courseApprovalNotice": "Course creation request may take up to 24 hours to process!",
+    "descriptionRequired": "Description is required"
+  }
 }
