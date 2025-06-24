@@ -24,7 +24,8 @@ export default function DashboardTabs() {
     { label: t("learning.recommended"), content: <CourseList /> },
     { label: t("learning.myLearning"), content: <EnrolledCourses /> },
     { label: t("learning.completedCourses"), content: <Box>Контент для третьего таба</Box> },
-    { label: t("learning.educationLeaders"), content: <Box>Контент для Четвёртого таба</Box> },
+    { label: t("learning.favorites"), content: <Box>Контент для четвёртого таба</Box> },
+    { label: t("learning.educationLeaders"), content: <Box>Контент для пятого таба</Box> },
   ];
 
   return (

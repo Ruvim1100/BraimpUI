@@ -1,4 +1,4 @@
-import { Box, CircularProgress } from "@mui/material";
+import { CircularProgress, Container } from "@mui/material";
 import { Navigate, Outlet } from "react-router-dom";
 import { paths } from "../../routes/paths";
 import { useAuth } from "react-oidc-context";
@@ -13,9 +13,9 @@ const LearningLayout = () => {
   return (
     <>
       <PrivateBar />
-      <Box>
+      <Container maxWidth="xl">
         <Outlet />
-      </Box>
+      </Container>
     </>
   );
 };

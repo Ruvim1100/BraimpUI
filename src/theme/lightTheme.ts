@@ -47,7 +47,7 @@ const lightTheme = createTheme({
     MuiAppBar: {
       styleOverrides: {
         root: {
-          backgroundColor: "rgb(255, 255, 255)",
+          backgroundColor: "rgb(250, 250, 250)",
           color: "#2f3e4d",
           borderBottom: "none",
           boxShadow: "none",
@@ -62,12 +62,19 @@ const lightTheme = createTheme({
       },
     },
     MuiTab: {
-      styleOverrides:{
-        root:{
-          backgroundColor: "rgb(250, 250, 250)"
-        }
-      }
-    }
+      styleOverrides: {
+        root: {
+          backgroundColor: "rgb(250, 250, 250)",
+        },
+      },
+    },
+    MuiDrawer: {
+      styleOverrides: {
+        paper: {
+          backgroundColor: "rgb(250, 250, 250)",
+        },
+      },
+    },
   },
 });
 

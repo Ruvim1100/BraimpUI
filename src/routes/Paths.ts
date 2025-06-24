@@ -6,7 +6,15 @@ export const paths = {
 
   learning: {
     base: "/learning",
-    Profile: "/learning/profile",
+  },
+
+  course: {
+    base: "/courses/:id",
+    news: "/courses/:id/news",
+    content: "/courses/:id/content",
+    grades: "/courses/:id/grades",
+    participants: "/courses/:id/participants",
+    settings: "/courses/:id/settings",
   },
 
   admin: {

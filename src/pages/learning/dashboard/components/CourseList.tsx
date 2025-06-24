@@ -268,7 +268,7 @@ const CourseList = () => {
                     },
                   }}
                 >
-                  {t("learning.continue")}
+                  {t("learning.learnMore")}
                 </Button>
               </CardActions>
             </Card>

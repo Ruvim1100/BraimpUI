@@ -14,10 +14,18 @@ import { useTranslation } from "react-i18next";
 import { getEnrolledCourses } from "../../../../api/courseApi";
 import { useQuery } from "@tanstack/react-query";
 import useAxiosPrivate from "../../../../hooks/useAxiosPrivate";
+import { useNavigate } from "react-router-dom";
+import { paths } from "../../../../routes/paths";
 
 const EnrolledCourses = () => {
   const { t } = useTranslation();
   const axios = useAxiosPrivate();
+  const navigate = useNavigate();
+
+  const handleContinue = (courseId: string) => {
+  const coursesPath = paths.course.base.replace(":id", courseId);
+  navigate(`${coursesPath}`);
+};
 
   const { data, isLoading, error } = useQuery({
     queryKey: ["enrolledCourses"],
@@ -106,6 +114,7 @@ const EnrolledCourses = () => {
             >
               <Button
                 size="medium"
+                onClick={() => handleContinue(course.id)}
                 sx={{
                   background: "rgb(202, 231, 227)",
                   width: "100%",

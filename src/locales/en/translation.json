@@ -49,6 +49,19 @@
     "titleDesc": "Alphabetically (Z-A)",
     "none": "No sorting",
     "sorting": "Sorting",
-    "noCourses": "There are no courses in this category."
+    "noCourses": "There are no courses in this category.",
+    "favorites": "Favorites",
+    "learnMore": "Learn More"
+  },
+
+  "course": {
+    "dashboard": "Dashboard",
+    "news": "News",
+    "content": "Course Content",
+    "grades": "Grades",
+    "participants": "Participants",
+    "schedule": "Schedule",
+    "settings": "Settings",
+    "backToCourses": "Back to Courses"
   }
 }
