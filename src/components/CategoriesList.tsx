@@ -4,14 +4,14 @@ import { useCategories } from "../hooks/useCategories";
 const CategoriesList = () => {
   const { categories, loading, error } = useCategories();
 
- if (loading) {
+  if (loading) {
     return (
       <Box display="flex" justifyContent="center" mt={4}>
         <CircularProgress />
       </Box>
     );
   }
-  if (error)   return <p>Error: {error.message}</p>;
+  if (error) return <p>Error: {error.message}</p>;
 
   return (
     <ul>

@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import CourseCard from "../../../../assets/courseCard.png";
 import {
   Box,
@@ -12,35 +11,20 @@ import {
 } from "@mui/material";
 
 import { useTranslation } from "react-i18next";
-import useAxiosPrivate from "../../../../hooks/useAxiosPrivate";
-import type { Course } from "../../../../models/courses/course";
 import { getEnrolledCourses } from "../../../../api/courseApi";
+import { useQuery } from "@tanstack/react-query";
+import useAxiosPrivate from "../../../../hooks/useAxiosPrivate";
 
 const EnrolledCourses = () => {
-  const axiosPrivate = useAxiosPrivate();
-  const [courses, setCourses] = useState<Course[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
   const { t } = useTranslation();
+  const axios = useAxiosPrivate();
 
-  useEffect(() => {
-    let isMounted = true;
+  const { data, isLoading, error } = useQuery({
+    queryKey: ["enrolledCourses"],
+    queryFn: () => getEnrolledCourses(axios),
+  });
 
-    const fetchCourses = async () => {
-      try {
-        const data = await getEnrolledCourses(axiosPrivate);
-        if (isMounted) setCourses(data);
-      } catch (err: any) {
-        if (isMounted) setError(err);
-      } finally {
-        if (isMounted) setLoading(false);
-      }
-    };
-
-    fetchCourses();
-  }, [axiosPrivate]);
-
-  if (loading) {
+  if (isLoading) {
     return (
       <Box display="flex" justifyContent="center" mt={4}>
         <CircularProgress />
@@ -50,39 +34,65 @@ const EnrolledCourses = () => {
 
   if (error) {
     return (
-      <Box mt={4} textAlign="center">
-        <Typography color="error">{error}</Typography>
-      </Box>
+      <Typography color="error" align="center" mt={4}>
+        {t("learning.courseLoadError")}
+      </Typography>
     );
   }
 
-  console.log(courses);
+  const courses = data ?? [];
+
   return (
     <Box
       display="flex"
       flexWrap="wrap"
-      gap={3}
+      gap={2}
       mt={4}
-      justifyContent="center"
+      justifyContent="space-between"
       sx={{
         boxShadow: "none",
       }}
     >
       {Array.isArray(courses) && courses.length === 0 ? (
-        <Typography>Вы не зарегистрированы ни на один курс.</Typography>
+        <Typography>{t("learning.notEnrolledInAnyCourses")}</Typography>
       ) : (
         courses.map((course) => (
           <Card
-          elevation={0}
+            key={course.id}
+            elevation={0}
             sx={{
-              maxWidth: 290,
+              width: {
+                xs: "100%",
+                sm: "calc(50% - 16px)",
+                md: "calc(33.33% - 16px)",
+                lg: 300,
+              },
               display: "flex",
               flexDirection: "column",
+              transition:
+                "transform 0.3s ease-in-out, box-shadow 0.1s ease-in-out",
+              "&:hover": {
+                transform: "scale(1.02)",
+                boxShadow: 1,
+              },
             }}
           >
-            <CardMedia component="img" image={CourseCard} alt="Course" />
+            <CardMedia
+              component="img"
+              image={
+                course.thumbnailImage && course.thumbnailImage.trim() !== ""
+                  ? course.thumbnailImage
+                  : CourseCard
+              }
+              alt="Course"
+              sx={{
+                width: "100%",
+                aspectRatio: "7 / 4",
+                objectFit: "cover",
+              }}
+            />
             <CardContent sx={{ flexGrow: 1 }}>
-              <Typography gutterBottom variant="h5">
+              <Typography gutterBottom variant="h6">
                 {course.title}
               </Typography>
               <Typography variant="body2" color="text.secondary">
@@ -95,17 +105,18 @@ const EnrolledCourses = () => {
               }}
             >
               <Button
-                size="small"
+                size="medium"
                 sx={{
-                  background: "#bee6e0",
+                  background: "rgb(202, 231, 227)",
                   width: "100%",
+                  borderRadius: 1,
                   "&:hover": {
-                    backgroundColor: "#99c9c1",
+                    backgroundColor: " #99c9c1",
                     boxShadow: "none",
                   },
                 }}
               >
-                {t("continue")}
+                {t("learning.continue")}
               </Button>
             </CardActions>
           </Card>

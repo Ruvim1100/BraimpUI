@@ -12,11 +12,11 @@ import {
 } from "@mui/material";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { GradingSystem } from "../models/courses/gradingSystem";
 import { useCategories } from "../hooks/useCategories";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
-import CreateCourseImg from "../assets/createCourseCard.png"
+import CreateCourseImg from "../assets/createCourse.png"
+import { GradingSystem } from "../models/courses/enums/gradingSystem";
 
 export default function CreateCourseFormDialog() {
   const [open, setOpen] = useState(false);

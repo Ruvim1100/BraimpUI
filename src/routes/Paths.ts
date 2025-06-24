@@ -9,11 +9,6 @@ export const paths = {
     Profile: "/learning/profile",
   },
 
-  studio: {
-    base: "/studio",
-    profile: "/studio/profile",
-  },
-
   admin: {
     base: "/admin",
   },

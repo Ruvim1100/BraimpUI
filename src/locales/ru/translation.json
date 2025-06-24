@@ -37,6 +37,18 @@
     "categoryRequired": "Категория обязательна",
     "failedToLoadCategories": "Не удалось загрузить категории",
     "courseApprovalNotice": "Рассмотрение заявки на создание курса может занять до 24 часов!",
-    "descriptionRequired": "Описание обязательно"
+    "descriptionRequired": "Описание обязательно",
+    "notEnrolledInAnyCourses": "Вы не зарегистрированы ни на один курс",
+    "courseLoadError": "Ошибка при загрузке курсов.",
+    "searchPlaceholder": "Чему вы хотите научиться?",
+    "search": "Поиск",
+    "all": "Все категории",
+    "newest": "Самые новые",
+    "oldest": "Самые старые",
+    "titleAsc": "По алфавиту (A-Я)",
+    "titleDesc": "По алфавиту (Я-A)",
+    "none": "Без сортировки",
+    "sorting": "Сортировка",
+    "noCourses": "В этой категории нет курсов."
   }
 }

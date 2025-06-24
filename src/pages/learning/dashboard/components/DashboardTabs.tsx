@@ -1,7 +1,8 @@
-import { Box, Tabs, Tab } from "@mui/material";
+import { Box, Tabs, Tab, Divider } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import EnrolledCourses from "./EnrolledCourses";
+import CourseList from "./CourseList";
 
 function TabPanel({
   children,
@@ -20,7 +21,7 @@ export default function DashboardTabs() {
   const { t } = useTranslation();
 
   const tabs = [
-    { label: t("learning.recommended"), content: <Box>Очень рекомендую курс по суициду, В конце будет практический экзамен </Box>  },
+    { label: t("learning.recommended"), content: <CourseList /> },
     { label: t("learning.myLearning"), content: <EnrolledCourses /> },
     { label: t("learning.completedCourses"), content: <Box>Контент для третьего таба</Box> },
     { label: t("learning.educationLeaders"), content: <Box>Контент для Четвёртого таба</Box> },
@@ -39,6 +40,7 @@ export default function DashboardTabs() {
           <Tab key={index} label={tab.label} />
         ))}
       </Tabs>
+      <Divider/>
 
       {tabs.map((tab, index) => (
         <TabPanel key={index} value={activeTab} index={index}>

@@ -6,7 +6,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => (
   <OidcProvider {...oidcConfig}
   onSigninCallback={() => {
       window.history.replaceState({}, document.title, window.location.pathname);
-      window.location.href = paths.learning.dashboard;
+      window.location.href = paths.learning.base;
   }}
   >{children}</OidcProvider>
 );

@@ -37,6 +37,18 @@
     "categoryRequired": "Categoria este obligatorie",
     "failedToLoadCategories": "Nu s-au putut încărca categoriile",
     "courseApprovalNotice": "Procesarea cererii de creare a cursului poate dura până la 24 de ore!",
-    "descriptionRequired": "Descriere este obligatorie"
+    "descriptionRequired": "Descriere este obligatorie",
+    "notEnrolledInAnyCourses": "Nu sunteți înscris la niciun curs",
+    "courseLoadError": "Eroare la încărcarea cursurilor.",
+    "searchPlaceholder": "Ce vrei să înveți?",
+    "search": "Caută",
+    "all": "Toate categoriile",
+    "newest": "Cele mai noi",
+    "oldest": "Cele mai vechi",
+    "titleAsc": "Alfabetic (A-Z)",
+    "titleDesc": "Alfabetic (Z-A)",
+    "none": "Fără sortare",
+    "sorting": "Triere",
+    "noCourses": "Nu există cursuri în această categorie."
   }
 }

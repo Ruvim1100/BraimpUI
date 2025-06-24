@@ -37,6 +37,18 @@
     "categoryRequired": "Category is required",
     "failedToLoadCategories": "Failed to load categories",
     "courseApprovalNotice": "Course creation request may take up to 24 hours to process!",
-    "descriptionRequired": "Description is required"
+    "descriptionRequired": "Description is required",
+    "notEnrolledInAnyCourses": "You are not enrolled in any courses.",
+    "courseLoadError": "Error loading courses.",
+    "searchPlaceholder": "What do you want to learn?",
+    "search": "Search",
+    "all": "All categories",
+    "newest": "Newest first",
+    "oldest": "Oldest first",
+    "titleAsc": "Alphabetically (A-Z)",
+    "titleDesc": "Alphabetically (Z-A)",
+    "none": "No sorting",
+    "sorting": "Sorting",
+    "noCourses": "There are no courses in this category."
   }
 }
