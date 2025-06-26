@@ -23,7 +23,7 @@ const EnrolledCourses = () => {
   const navigate = useNavigate();
 
   const handleContinue = (courseId: string) => {
-  const coursesPath = paths.course.base.replace(":id", courseId);
+  const coursesPath = paths.course.base.replace(":courseId", courseId);
   navigate(`${coursesPath}`);
 };
 

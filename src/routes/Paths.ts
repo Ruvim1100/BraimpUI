@@ -9,12 +9,12 @@ export const paths = {
   },
 
   course: {
-    base: "/courses/:id",
-    news: "/courses/:id/news",
-    content: "/courses/:id/content",
-    grades: "/courses/:id/grades",
-    participants: "/courses/:id/participants",
-    settings: "/courses/:id/settings",
+    base: "/courses/:courseId",
+    news: "/courses/:courseId/news",
+    content: "/courses/:courseId/content",
+    grades: "/courses/:courseId/grades",
+    participants: "/courses/:courseId/participants",
+    settings: "/courses/:courseId/settings",
   },
 
   admin: {

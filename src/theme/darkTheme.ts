@@ -70,6 +70,13 @@ const darkTheme = createTheme({
         },
       },
     },
+    MuiAvatar:{
+      styleOverrides: {
+        root: {
+          backgroundColor: "rgb(22, 176, 152)"
+        }
+      }
+    }
   },
 });
 

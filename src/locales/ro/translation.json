@@ -53,15 +53,18 @@
     "favorites": "Favorite",
     "learnMore": "Află mai multe"
   },
-  
+
   "course": {
-  "dashboard": "Panou general",
-  "news": "Noutăți",
-  "content": "Materiale de curs",
-  "grades": "Note",
-  "participants": "Participanți",
-  "schedule": "Orar",
-  "settings": "Setări",
-  "backToCourses": "Înapoi la cursuri"
-}
+    "dashboard": "Panou general",
+    "news": "Noutăți",
+    "content": "Materiale de curs",
+    "grades": "Note",
+    "participants": "Participanți",
+    "schedule": "Orar",
+    "settings": "Setări",
+    "backToCourses": "Înapoi la cursuri",
+    "moduleLoadError": "Eroare la încărcarea modulelor",
+    "lessonLoadError": "Eroare la încărcarea lecției.",
+    "noLessons": "Nu există lecții disponibile."
+  }
 }

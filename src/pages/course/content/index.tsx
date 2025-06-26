@@ -1,11 +1,12 @@
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
+import ModuleList from "./components/ModuleList";
 
 function ContentPage() {
-  return <Box>
-    <Typography component={"h2"}>
-        Here will be Content
-    </Typography>
-  </Box>;
+  return (
+    <Box>
+      <ModuleList />
+    </Box>
+  );
 }
 
 export default ContentPage;

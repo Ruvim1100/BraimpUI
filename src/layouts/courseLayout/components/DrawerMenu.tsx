@@ -21,7 +21,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { paths } from "../../../routes/paths";
 import { useTranslation } from "react-i18next";
 
-const drawerWidth = 240;
+const drawerWidth = 220;
 
 interface DrawerMenuProps {
   open: boolean;
@@ -40,42 +40,42 @@ export const DrawerMenu: React.FC<DrawerMenuProps> = ({ open, onClose }) => {
   const navigate = useNavigate();
   const {t} = useTranslation();
 
-  const { id } = useParams();
+  const { courseId} = useParams();
 
   const groupedItems = [
     [
       {
         label: t("course.dashboard"),
         icon: <DashboardOutlinedIcon />,
-        path: id ? paths.course.base.replace(":id", id) : "#",
+        path: courseId ? paths.course.base.replace(":courseId", courseId) : "#",
       },
       {
         label: t("course.news"),
         icon: <CampaignIcon />,
-        path: id ? paths.course.news.replace(":id", id) : "#",
+        path: courseId ? paths.course.news.replace(":courseId", courseId) : "#",
       },
       {
         label: t("course.content"),
         icon: <MenuBookIcon />,
-        path: id ? paths.course.content.replace(":id", id) : "#",
+        path: courseId ? paths.course.content.replace(":courseId", courseId) : "#",
       },
     ],
     [
       {
         label: t("course.grades"),
         icon: <SchoolIcon />,
-        path: id ? paths.course.grades.replace(":id", id) : "#",
+        path: courseId ? paths.course.grades.replace(":courseId", courseId) : "#",
       },
       {
         label: t("course.participants"),
         icon: <GroupsIcon />,
-        path: id ? paths.course.participants.replace(":id", id) : "#",
+        path: courseId ? paths.course.participants.replace(":courseId", courseId) : "#",
       },
       { label: t("course.schedule"), icon: <CalendarMonthIcon />, path: "#" },
       {
         label: t("course.settings"),
         icon: <SettingsIcon />,
-        path: id ? paths.course.settings.replace(":id", id) : "#",
+        path: courseId ? paths.course.settings.replace(":courseId", courseId) : "#",
       },
     ],
     [

@@ -4,12 +4,12 @@ const lightTheme = createTheme({
   palette: {
     mode: "light",
     primary: {
-      main: "#149481",
+      main: "rgb(20, 148, 129)",
       contrastText: "#ffffff",
     },
     secondary: {
-      main: "#16b098",
-      contrastText: "#ffffff",
+      main: "rgb(22, 176, 152)",
+      contrastText: "rgb(255, 255, 255)",
     },
     background: {
       default: "rgb(250, 250, 250)",
@@ -75,6 +75,13 @@ const lightTheme = createTheme({
         },
       },
     },
+    MuiAvatar:{
+      styleOverrides: {
+        root: {
+          backgroundColor: "rgb(22, 176, 152)"
+        }
+      }
+    }
   },
 });
 

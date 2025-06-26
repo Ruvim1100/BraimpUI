@@ -9,7 +9,7 @@ import { DrawerMenu } from "./components/DrawerMenu";
 
 const CourseLayout = () => {
   const { isLoading, user } = useAuth();
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
 
   if (isLoading) return <CircularProgress />;
   if (!user) return <Navigate to={paths.public.landing} replace />;

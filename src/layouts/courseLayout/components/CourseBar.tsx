@@ -14,7 +14,7 @@ import logo from "../../../assets/styledLogo.png";
 import { Link as RouterLink } from 'react-router-dom';
 import { Container } from "@mui/material";
 
-const drawerWidth = 240;
+const drawerWidth = 220;
 
 const StyledAppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== "open" && prop !== "onOpen",

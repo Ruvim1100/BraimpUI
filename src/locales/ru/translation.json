@@ -54,13 +54,16 @@
     "learnMore": "Узнать больше"
   },
   "course": {
-  "dashboard": "Обзор курса",
-  "news": "Новости",
-  "content": "Учебные материалы",
-  "grades": "Оценки",
-  "participants": "Участники",
-  "schedule": "Расписание",
-  "settings": "Настройки",
-  "backToCourses": "К списку курсов"
-}
+    "dashboard": "Обзор курса",
+    "news": "Новости",
+    "content": "Учебные материалы",
+    "grades": "Оценки",
+    "participants": "Участники",
+    "schedule": "Расписание",
+    "settings": "Настройки",
+    "backToCourses": "К списку курсов",
+    "moduleLoadError": "Ошибка при загрузке модулей",
+    "lessonLoadError": "Ошибка при загрузке лекций",
+    "noLessons": "Уроки отсутствуют."
+  }
 }
