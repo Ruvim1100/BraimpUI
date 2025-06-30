@@ -65,6 +65,11 @@
     "backToCourses": "Back to Courses",
     "moduleLoadError": "Error loading modules.",
     "lessonLoadError": "Error loading lessons.",
-    "noLessons": "No lessons available"
+    "noLessons": "No lessons available",
+    "testing": "Testing",
+    "quizLoadError": "Error loading quizzes",
+    "attempts": "Number of attempts",
+    "assignmentLoadError": "Error loading assignments",
+    "assignments": "Assignments"
   }
 }

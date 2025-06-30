@@ -1,4 +1,4 @@
-export interface ModuleLookupModel {
+export interface PublishedModuleLookupModel {
   id: string;
   title: string;
   description?: string;
@@ -6,6 +6,6 @@ export interface ModuleLookupModel {
   lessonCount: number;
 }
 
-export interface ModuleListResponse {
-  modules: ModuleLookupModel[];
+export interface PublishedModuleListResponse {
+  modules: PublishedModuleLookupModel[];
 }

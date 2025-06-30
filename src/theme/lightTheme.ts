@@ -8,7 +8,7 @@ const lightTheme = createTheme({
       contrastText: "#ffffff",
     },
     secondary: {
-      main: "rgb(22, 176, 152)",
+      main: "rgb(225, 242, 239)",
       contrastText: "rgb(255, 255, 255)",
     },
     background: {
@@ -16,7 +16,7 @@ const lightTheme = createTheme({
       paper: "#ffffff",
     },
     text: {
-      primary: "#2f3e4d",
+      primary: "rgb(70, 75, 80)",
       secondary: "#6b7c93",
     },
     divider: "#e0e0e0",

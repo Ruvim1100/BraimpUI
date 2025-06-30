@@ -65,6 +65,11 @@
     "backToCourses": "Înapoi la cursuri",
     "moduleLoadError": "Eroare la încărcarea modulelor",
     "lessonLoadError": "Eroare la încărcarea lecției.",
-    "noLessons": "Nu există lecții disponibile."
+    "noLessons": "Nu există lecții disponibile.",
+    "testing": "Testare",
+    "quizLoadError": "Eroare la încărcarea testelor",
+    "attempts": "Număr de încercări",
+    "assignmentLoadError": "Eroare la încărcarea sarcinilor",
+    "assignments": "Sarcini"
   }
 }

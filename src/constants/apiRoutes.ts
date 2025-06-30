@@ -14,5 +14,13 @@ export const apiRoutes = {
 
     lessons: {
         getPublishedLessons: (courseId: string, moduleId:string) => `/courses/${courseId}/modules/${moduleId}/lessons/published`
+    },
+
+    quizzes: {
+        getPublishedQuizzes: (courseId: string) => `/courses/${courseId}/quizzes/published`
+    },
+
+    assignments: {
+        getAssignments: (courseId: string) => `/courses/${courseId}/assignments`
     }
 }

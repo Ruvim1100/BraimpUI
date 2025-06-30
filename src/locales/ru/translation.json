@@ -64,6 +64,11 @@
     "backToCourses": "К списку курсов",
     "moduleLoadError": "Ошибка при загрузке модулей",
     "lessonLoadError": "Ошибка при загрузке лекций",
-    "noLessons": "Уроки отсутствуют."
+    "noLessons": "Уроки отсутствуют.",
+    "testing": "Тестирование",
+    "quizLoadError": "Ошибка при загрузке Тестов",
+    "attempts": "Количество попыток",
+    "assignmentLoadError": "Ошибка при загрузке Заданий",
+    "assignments": "Задания"
   }
 }

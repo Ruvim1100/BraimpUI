@@ -15,6 +15,8 @@ export const paths = {
     grades: "/courses/:courseId/grades",
     participants: "/courses/:courseId/participants",
     settings: "/courses/:courseId/settings",
+    lesson: "/courses/:courseId/modules/:moduleId/lesson/:lessonId",
+    quiz: "/courses/:courseId/quizzes/:quizId"
   },
 
   admin: {

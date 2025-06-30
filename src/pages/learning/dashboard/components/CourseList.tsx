@@ -198,7 +198,7 @@ const CourseList = () => {
       <Box
         display="flex"
         flexWrap="wrap"
-        gap={2}
+        gap={1}
         mt={4}
         justifyContent="space-between"
         sx={{
@@ -214,10 +214,10 @@ const CourseList = () => {
               elevation={0}
               sx={{
                 width: {
-                  xs: "100%",
-                  sm: "calc(50% - 16px)",
-                  md: "calc(33.33% - 16px)",
-                  lg: 300,
+                xs: "100%",
+                sm: "calc(50% - 16px)",
+                md: "calc(33.33% - 16px)",
+                lg: "calc(19% )",
                 },
                 display: "flex",
                 flexDirection: "column",

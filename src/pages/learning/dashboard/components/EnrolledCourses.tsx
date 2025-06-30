@@ -56,7 +56,7 @@ const EnrolledCourses = () => {
       flexWrap="wrap"
       gap={2}
       mt={4}
-      justifyContent="space-between"
+      justifyContent="flex-start"
       sx={{
         boxShadow: "none",
       }}
@@ -73,7 +73,7 @@ const EnrolledCourses = () => {
                 xs: "100%",
                 sm: "calc(50% - 16px)",
                 md: "calc(33.33% - 16px)",
-                lg: 300,
+                lg: "calc(19% )",
               },
               display: "flex",
               flexDirection: "column",

@@ -47,7 +47,7 @@ function ModuleList() {
     <Box>
       <Box>
         <Typography
-          component="h2"
+          component="h6"
           variant="h6"
           color="text.secondary"
           gutterBottom
@@ -77,13 +77,13 @@ function ModuleList() {
             >
               <Box display="flex" alignItems="center" gap={2}>
                 <Avatar>{module.sortIndex}</Avatar>
-                <Typography>{module.title}</Typography>
+                <Typography fontWeight={"500"} color="text.primary">{module.title}</Typography>
               </Box>
 
               <Typography color="text.secondary">{module.lessonCount} Лекции</Typography>
             </Box>
           </AccordionSummary>
-          <AccordionDetails>
+          <AccordionDetails sx={{p: 0}}>
             <LessonList moduleId={module.id} courseId={courseId!} />
           </AccordionDetails>
         </Accordion>
