@@ -15,7 +15,6 @@ import MenuBookIcon from "@mui/icons-material/MenuBook";
 import SchoolIcon from "@mui/icons-material/School";
 import GroupsIcon from "@mui/icons-material/Groups";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
-import SettingsIcon from "@mui/icons-material/Settings";
 import LogoutIcon from "@mui/icons-material/Logout";
 import { useNavigate, useParams } from "react-router-dom";
 import { paths } from "../../../routes/paths";
@@ -72,11 +71,6 @@ export const DrawerMenu: React.FC<DrawerMenuProps> = ({ open, onClose }) => {
         path: courseId ? paths.course.participants.replace(":courseId", courseId) : "#",
       },
       { label: t("course.schedule"), icon: <CalendarMonthIcon />, path: "#" },
-      {
-        label: t("course.settings"),
-        icon: <SettingsIcon />,
-        path: courseId ? paths.course.settings.replace(":courseId", courseId) : "#",
-      },
     ],
     [
       {

@@ -1,9 +1,12 @@
-import { Box } from "@mui/material";
+import { Box} from "@mui/material";
+import { QuizDetails } from "./components/QuizDeatils";
+import { PassedQuizzes } from "./components/PassedQuizzes";
 
 export const QuizPage = () => {
-    return (
-        <Box>
-            Do not Try fo anything here, a already failed the test
-        </Box>
-    );
-}
+  return (
+    <Box display={"flex"} flexDirection={"column"} rowGap={5}>
+      <QuizDetails />
+      <PassedQuizzes/>
+    </Box>
+  );
+};

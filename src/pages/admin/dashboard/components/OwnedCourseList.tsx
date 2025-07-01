@@ -13,14 +13,14 @@ import {
 } from "@mui/material";
 
 import { useTranslation } from "react-i18next";
-import { getEnrolledCourses } from "../../../../api/courseApi";
+import { getOwnedCourses } from "../../../../api/courseApi";
 import { useQuery } from "@tanstack/react-query";
 import useAxiosPrivate from "../../../../hooks/useAxiosPrivate";
 import { useNavigate } from "react-router-dom";
 import { paths } from "../../../../routes/paths";
 import { useState } from "react";
 
-const EnrolledCourses = () => {
+export const OwnedCourses = () => {
   const { t } = useTranslation();
   const axios = useAxiosPrivate();
   const navigate = useNavigate();
@@ -34,9 +34,9 @@ const EnrolledCourses = () => {
   };
 
   const { data, isLoading, error } = useQuery({
-    queryKey: ["enrolledCourses", pageNumber],
+    queryKey: ["ownedCourses", pageNumber],
     queryFn: () =>
-      getEnrolledCourses(axios, { page: pageNumber, pageSize: PAGE_SIZE }),
+      getOwnedCourses(axios, { page: pageNumber, pageSize: PAGE_SIZE }),
   });
 
   const courses = data?.items ?? [];
@@ -100,11 +100,24 @@ const EnrolledCourses = () => {
                   }}
                 />
                 <CardContent sx={{ flexGrow: 1 }}>
+                    {/* <Typography >
+                        Marketing
+                    </Typography> */}
                   <Typography gutterBottom variant="h6">
                     {course.title}
                   </Typography>
                   {course.description && (
-                    <Typography variant="body2" color="text.secondary">
+                    <Typography
+                      variant="body2"
+                      color="text.secondary"
+                      sx={{
+                        display: "-webkit-box",
+                        WebkitLineClamp: 3,
+                        WebkitBoxOrient: "vertical",
+                        overflow: "hidden",
+                        textOverflow: "ellipsis",
+                      }}
+                    >
                       {course.description}
                     </Typography>
                   )}
@@ -138,5 +151,3 @@ const EnrolledCourses = () => {
     </Box>
   );
 };
-
-export default EnrolledCourses;

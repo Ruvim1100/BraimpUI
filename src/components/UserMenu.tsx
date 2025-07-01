@@ -9,18 +9,18 @@ import {
   Box,
 } from "@mui/material";
 import Logout from "@mui/icons-material/Logout";
-import Settings from "@mui/icons-material/Settings";
 import { useAuth } from "react-oidc-context";
 import SchoolIcon from "@mui/icons-material/School";
 import EmojiObjectsIcon from "@mui/icons-material/EmojiObjects";
 import PersonIcon from "@mui/icons-material/Person";
 import { useTranslation } from "react-i18next";
-
+import { paths } from "../routes/paths";
+import { useNavigate } from "react-router-dom";
 
 const UserMenu = () => {
   const { user } = useAuth();
-
-  const {t} = useTranslation();
+  const { t } = useTranslation();
+  const navigate = useNavigate();
 
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
@@ -33,7 +33,7 @@ const UserMenu = () => {
     setAnchorEl(null);
   };
 
- const { signoutRedirect } = useAuth();
+  const { signoutRedirect } = useAuth();
 
   const fullName = useMemo(() => {
     if (user?.profile?.name) return user.profile.name;
@@ -48,21 +48,24 @@ const UserMenu = () => {
   );
 
   const menuItems = [
-    { icon: <PersonIcon fontSize="small" />, label: "Profile" },
-    { icon: <Settings fontSize="small" />, label: "Settings" },
-    { icon: <SchoolIcon fontSize="small" />, label: "My Learning" },
-    { icon: <EmojiObjectsIcon fontSize="small" />, label: "Course studio" },
+    { icon: <PersonIcon fontSize="small" />, label: "Profile", path: "/"},
+    { icon: <SchoolIcon fontSize="small" />, label: "My Learning", path: paths.learning.base},
+    { icon: <EmojiObjectsIcon fontSize="small" />, label: "Course studio", path: paths.admin.base},
   ];
 
-   return (
+  return (
     <>
       <Tooltip title="Account settings">
         <Box
           onClick={handleOpen}
           sx={{
-            display: "flex", alignItems: "center", gap: 1, cursor: "pointer",}}
-            m={1}>
-
+            display: "flex",
+            alignItems: "center",
+            gap: 1,
+            cursor: "pointer",
+          }}
+          m={1}
+        >
           <Avatar sx={{ width: 35, height: 35 }}>{avatarLetter}</Avatar>
         </Box>
       </Tooltip>
@@ -84,8 +87,8 @@ const UserMenu = () => {
 
         <Divider />
 
-        {menuItems.map(({ icon, label }) => (
-          <MenuItem key={label}>
+        {menuItems.map(({ icon, label, path }) => (
+          <MenuItem key={label} onClick={() => navigate(path)}>
             <ListItemIcon>{icon}</ListItemIcon>
             {label}
           </MenuItem>

@@ -9,6 +9,8 @@ import ParticipantsPage from "../pages/course/participants";
 import SettingPage from "../pages/course/settnigs";
 import { LessonPage } from "../pages/course/lesson";
 import { QuizPage } from "../pages/course/quiz";
+import { AssignmentPage } from "../pages/course/assignment";
+import { QuizSessionPage } from "../pages/course/quizSession";
 
 const courseRoutes: RouteObject= {
         path: paths.course.base,
@@ -21,7 +23,9 @@ const courseRoutes: RouteObject= {
             {path: paths.course.participants, element: <ParticipantsPage/>},
             {path: paths.course.settings, element: <SettingPage/>},
             {path: paths.course.lesson, element: <LessonPage/>},
-            {path: paths.course.quiz, element: <QuizPage/>}
+            {path: paths.course.quiz, element: <QuizPage/>},
+            {path: paths.course.assignment, element: <AssignmentPage/>},
+            {path: paths.course.quizSession, element: <QuizSessionPage/>}
         ]
 }
 

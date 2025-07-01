@@ -11,8 +11,9 @@ import LanguageMenu from "../../../components/LanguageMenu";
 import SwitchThemeToggle from "../../../components/SwitchThemeToggle";
 import UserMenu from "../../../components/UserMenu";
 import logo from "../../../assets/styledLogo.png";
-import { Link as RouterLink } from 'react-router-dom';
+import { Link as RouterLink } from "react-router-dom";
 import { Container } from "@mui/material";
+import NotificationsIcon from '@mui/icons-material/Notifications';
 
 const drawerWidth = 220;
 
@@ -46,40 +47,49 @@ export const CourseAppBar: React.FC<CourseAppBarProps> = ({
   return (
     <StyledAppBar position="fixed" open={open} {...muiProps} elevation={0}>
       <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
-        <Container maxWidth="xl" disableGutters sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-        <Box sx={{ display: "flex", alignItems: "center" }}>
-          <IconButton
-            edge="start"
-            color="inherit"
-            aria-label="open drawer"
-            onClick={onOpen}
-            sx={{ mr: 2, ...(open && { display: "none" }) }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Box
-            component={RouterLink}
-            to="/learning"
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              textDecoration: "none",
-            }}
-          >
+        <Container
+          maxWidth="xl"
+          disableGutters
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
+          <Box sx={{ display: "flex", alignItems: "center" }}>
+            <IconButton
+              edge="start"
+              color="inherit"
+              aria-label="open drawer"
+              onClick={onOpen}
+              sx={{ mr: 2, ...(open && { display: "none" }) }}
+            >
+              <MenuIcon />
+            </IconButton>
             <Box
-              component="img"
-              src={logo}
-              alt="Braimp Logo"
-              sx={{ height: "2rem" }}
-            />
+              component={RouterLink}
+              to="/learning"
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                textDecoration: "none",
+              }}
+            >
+              <Box
+                component="img"
+                src={logo}
+                alt="Braimp Logo"
+                sx={{ height: "2rem" }}
+              />
+            </Box>
           </Box>
-        </Box>
 
-        <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-          <LanguageMenu />
-          <SwitchThemeToggle />
-          <UserMenu />
-        </Box>
+          <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+            <LanguageMenu />
+            <SwitchThemeToggle />
+            <NotificationsIcon/>  
+            <UserMenu />
+          </Box>
         </Container>
       </Toolbar>
     </StyledAppBar>

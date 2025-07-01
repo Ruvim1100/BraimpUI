@@ -13,6 +13,7 @@ import {
   Card,
   CardMedia,
   Pagination,
+  Grid,
 } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import { useTranslation } from "react-i18next";
@@ -208,71 +209,62 @@ const CourseList = () => {
         {Array.isArray(courses) && courses.length === 0 ? (
           <Typography>{t("learning.noCourses")}</Typography>
         ) : (
-          courses.map((course) => (
-            <Card
-              key={course.id}
-              elevation={0}
-              sx={{
-                width: {
-                xs: "100%",
-                sm: "calc(50% - 16px)",
-                md: "calc(33.33% - 16px)",
-                lg: "calc(19% )",
-                },
-                display: "flex",
-                flexDirection: "column",
-                transition:
-                  "transform 0.3s ease-in-out, box-shadow 0.1s ease-in-out",
-                "&:hover": {
-                  transform: "scale(1.02)",
-                  boxShadow: 1,
-                },
-              }}
-            >
-              <CardMedia
-                component="img"
-                image={
-                  course.thumbnailImage && course.thumbnailImage.trim() !== ""
-                    ? course.thumbnailImage
-                    : CourseCard
-                }
-                alt="Course"
-                sx={{
-                  width: "100%",
-                  aspectRatio: "7 / 4",
-                  objectFit: "cover",
-                }}
-              />
-              <CardContent sx={{ flexGrow: 1 }}>
-                <Typography gutterBottom variant="h6">
-                  {course.title}
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  {course.description}
-                </Typography>
-              </CardContent>
-              <CardActions
-                sx={{
-                  justifyContent: "center",
-                }}
-              >
-                <Button
-                  size="medium"
+          <Grid
+            container
+            spacing={{ xs: 2, md: 3 }}
+            columns={{ xs: 4, sm: 8, md: 12, lg: 16, xl: 20}}
+          >
+            {courses.map((course) => (
+              <Grid key={course.id} size={{xs: 4, md: 4, lg: 4, xl: 5}}>
+                <Card
+                  elevation={1}
                   sx={{
-                    background: "rgb(202, 231, 227)",
-                    borderRadius: 1,
-                    width: "100%",
+                    height: "100%",
+                    display: "flex",
+                    flexDirection: "column",
+                    transition:
+                      "transform 0.3s ease-in-out, box-shadow 0.1s ease-in-out",
                     "&:hover": {
-                      backgroundColor: " #99c9c1",
-                      boxShadow: "none",
+                      transform: "scale(1.02)",
+                      boxShadow: 1,
                     },
                   }}
                 >
-                  {t("learning.learnMore")}
-                </Button>
-              </CardActions>
-            </Card>
-          ))
+                  <CardMedia
+                    component="img"
+                    image={
+                      course.thumbnailImageUrl?.trim()
+                        ? course.thumbnailImageUrl
+                        : CourseCard
+                    }
+                    alt="Course"
+                    sx={{
+                      width: "100%",
+                      aspectRatio: "7 / 4",
+                      objectFit: "cover",
+                    }}
+                  />
+                  <CardContent sx={{ flexGrow: 1 }}>
+                    <Typography gutterBottom variant="h6">
+                      {course.title}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                      {course.description}
+                    </Typography>
+                  </CardContent>
+                  <CardActions sx={{ justifyContent: "center" }}>
+                    <Button
+                      size="medium"
+                      variant="contained"
+                      sx={{ flex: 1, borderRadius: 2, m: 1}}
+                    >
+                      {t("learning.learnMore")}
+                    </Button>
+                  </CardActions>
+                </Card>
+              </Grid>
+            ))}
+          </Grid>
         )}
       </Box>
       <Box display="flex" justifyContent="center" mt={4}>

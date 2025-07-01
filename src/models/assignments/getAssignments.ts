@@ -2,7 +2,7 @@ export interface AssignmentLookupModel{
     id: string,
     title: string,
     description: string,
-    deadLine: Date,
+    deadline: Date,
 }
 
 export interface AssignmentListResponse{

@@ -16,7 +16,9 @@ export const paths = {
     participants: "/courses/:courseId/participants",
     settings: "/courses/:courseId/settings",
     lesson: "/courses/:courseId/modules/:moduleId/lesson/:lessonId",
-    quiz: "/courses/:courseId/quizzes/:quizId"
+    quiz: "/courses/:courseId/quizzes/:quizId",
+    assignment: "/courses/:courseId/assignments/:assignmentId",
+    quizSession: "/courses/:courseId/quizzes/:quizId/quizSession"
   },
 
   admin: {

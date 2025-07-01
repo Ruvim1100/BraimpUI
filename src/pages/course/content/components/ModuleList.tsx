@@ -4,7 +4,7 @@ import {
   AccordionSummary,
   Avatar,
   Box,
-  CircularProgress,
+  Skeleton,
   Typography,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
@@ -20,26 +20,29 @@ function ModuleList() {
   const axios = useAxiosPrivate();
   const { courseId } = useParams();
 
-  const { data, isLoading, error } = useQuery({
+  const { data, isLoading, isError } = useQuery({
     queryKey: ["modules", courseId],
     queryFn: () => getPublishedModules(axios, courseId!),
   });
 
   if (isLoading) {
     return (
-      <Box display="flex" justifyContent="center" mt={4}>
-        <CircularProgress />
-      </Box>
+      <>
+        {[...Array(6)].map((_, i) => (
+          <Skeleton key={i} animation={i % 2 ? "wave" : false} />
+        ))}
+      </>
     );
   }
 
-  if (error) {
+  if (isError) {
     return (
       <Typography color="error" align="center" mt={4}>
-        {t("learning.courseLoadError")}
+        {t("course.assignmentLoadError")}
       </Typography>
     );
   }
+
 
   const modules = data ?? [];
 
@@ -50,9 +53,9 @@ function ModuleList() {
           component="h6"
           variant="h6"
           color="text.secondary"
-          gutterBottom
+          mb={1}
         >
-          Модули курса
+          {t("course.courseModules")}
         </Typography>
       </Box>
       {modules.map((module) => (

@@ -34,7 +34,7 @@ function LessonList({ courseId, moduleId }: LessonListProps) {
       .replace(":moduleId", moduleId)
       .replace(":lessonId", lessonId);
 
-  const { data, isLoading, error } = useQuery({
+  const { data, isLoading, isError } = useQuery({
     queryKey: ["lessons", courseId, moduleId],
     queryFn: () => getPublishedLessons(axios, courseId, moduleId),
   });
@@ -47,13 +47,14 @@ function LessonList({ courseId, moduleId }: LessonListProps) {
     );
   }
 
-  if (error) {
+  if (isError) {
     return (
       <Typography color="error" align="center" mt={4}>
-        {t("course.lessonLoadError")}
+        {t("course.assignmentLoadError")}
       </Typography>
     );
   }
+
 
   const lessons = data ?? [];
 

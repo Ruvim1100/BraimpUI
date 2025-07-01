@@ -1,12 +1,12 @@
-export interface CourseLookupModel {
+export interface OwnedCourseLookupModel {
   id: string;
   title: string;
   description?: string;
   thumbnailImageUrl?: string;
 }
 
-export interface CourseListResponse {
-  items: CourseLookupModel[];
+export interface OwnedCourseListResponse {
+  items: OwnedCourseLookupModel[];
   page: number;
   pageSize: number;
   query: string;
@@ -14,11 +14,8 @@ export interface CourseListResponse {
   totalPages: number;
 }
 
-export interface GetCourseListParams {
+export interface GetOwnedCourseListParams {
   page?: number;
   pageSize?: number;
-  searchTerm?: string;
-  category?: string;
   sortBy?: string;
-  descending?: boolean;
 }

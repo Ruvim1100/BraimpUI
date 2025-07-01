@@ -1,6 +1,6 @@
 import React from "react";
-import { styled, useTheme } from "@mui/material/styles";
-import { Container } from "@mui/material";
+import { styled } from "@mui/material/styles";
+import { Container, Toolbar } from "@mui/material";
 
 const drawerWidth = 240;
 
@@ -22,14 +22,10 @@ const StyledMain = styled("main", {
 }));
 
 export const MainContent: React.FC<MainContentProps> = ({ open, children }) => {
-  const theme = useTheme(); 
-
   return (
     <StyledMain open={open}>
-      <div style={{ ...theme.mixins.toolbar }} />
-      <Container maxWidth="xl">
-        {children}
-      </Container>
+      <Toolbar />
+      <Container maxWidth="xl">{children}</Container>
     </StyledMain>
   );
 };

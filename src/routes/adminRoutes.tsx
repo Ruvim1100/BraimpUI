@@ -1,13 +1,13 @@
 import type { RouteObject } from "react-router-dom";
 import { paths } from "./paths";
 import AdminLayout from "../layouts/adminLayout";
-import NotFoundPage from "../pages/notFoundPage";
+import { DashboardPage } from "../pages/admin/dashboard";
 
 const adminRoutes: RouteObject = {
   path: paths.admin.base,
   element: <AdminLayout />,
   children: [    
-    {index: true, element: <NotFoundPage/>}
+    {index: true, element: <DashboardPage/>}
   ],
 };
 

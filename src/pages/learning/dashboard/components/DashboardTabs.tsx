@@ -36,6 +36,8 @@ export default function DashboardTabs() {
         aria-label="dashboard tabs"
         textColor="primary"
         indicatorColor="primary"
+        variant="scrollable"
+        scrollButtons="auto"
       >
         {tabs.map((tab, index) => (
           <Tab key={index} label={tab.label} />
