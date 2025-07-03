@@ -26,7 +26,7 @@ export const LessonItem = ({ lesson, onClick }: Props) => {
       onClick={onClick}
     >
       <SchoolOutlinedIcon fontSize="small" color="primary" />
-      <Typography variant="body1">
+      <Typography fontSize={15} color="text.secondary" fontWeight={500}>
         {lesson.sortIndex}. {lesson.title}
       </Typography>
     </Box>
