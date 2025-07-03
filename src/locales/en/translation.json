@@ -102,5 +102,11 @@
     "submit": "Submit",
     "submissionSuccess": "Submission successful!",
     "submissionError": "Failed to submit. Please try again."
+  },
+
+  "admin": {
+    "editCourse": "Edit Course",
+    "moduleLoadError": "Error loading modules.",
+    "addLesson": "Add Lesson"
   }
 }

@@ -3,6 +3,7 @@ import { useAuth } from "react-oidc-context";
 import { Navigate, Outlet } from "react-router-dom";
 import { paths } from "../../routes/paths";
 import AdminAppBar from "./components/AdminAppBar";
+import { Footer } from "./components/Footer";
 
 const AdminLayout = () => {
   const { isLoading, user } = useAuth();
@@ -15,6 +16,7 @@ const AdminLayout = () => {
       <Container maxWidth="lg">
         <Outlet />
       </Container>
+      <Footer/>
     </>
   );
 };

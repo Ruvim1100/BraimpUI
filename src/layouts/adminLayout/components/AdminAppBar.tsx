@@ -7,7 +7,7 @@ import SwitchThemeToggle from "../../../components/SwitchThemeToggle";
 
 const PrivateBar = () => {
   return (
-    <AppBar position="static" elevation={0}>
+    <AppBar position="static" elevation={0} sx={{mb: 2}}>
       <Container maxWidth="lg">
         <Toolbar
           disableGutters

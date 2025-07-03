@@ -5,7 +5,8 @@ export const apiRoutes = {
     courses: {
         getEnrolled: "/courses/enrolled",
         getOwned: "/courses/owned",
-        getAllCourses: "/courses"
+        getAllCourses: "/courses",
+        getCourseById: (courseId: string) => `/courses/${courseId}`
     },
 
     modules: {
@@ -14,7 +15,8 @@ export const apiRoutes = {
     },
 
     lessons: {
-        getPublishedLessons: (courseId: string, moduleId:string) => `/courses/${courseId}/modules/${moduleId}/lessons/published`
+        getPublishedLessons: (courseId: string, moduleId:string) => `/courses/${courseId}/modules/${moduleId}/lessons/published`,
+        getLessonDetails: (courseId: string, moduleId:string, lessonId: string) => `/courses/${courseId}/modules/${moduleId}/lessons/${lessonId}`
     },
 
     quizzes: {

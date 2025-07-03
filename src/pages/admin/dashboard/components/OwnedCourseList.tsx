@@ -29,7 +29,7 @@ export const OwnedCourses = () => {
   const PAGE_SIZE = 12;
 
   const handleContinue = (courseId: string) => {
-    const coursesPath = paths.course.base.replace(":courseId", courseId);
+    const coursesPath = paths.admin.courseEditor.builder.base.replace(":courseId", courseId);
     navigate(`${coursesPath}`);
   };
 
@@ -100,9 +100,9 @@ export const OwnedCourses = () => {
                   }}
                 />
                 <CardContent sx={{ flexGrow: 1 }}>
-                    {/* <Typography >
+                    <Typography >
                         Marketing
-                    </Typography> */}
+                    </Typography>
                   <Typography gutterBottom variant="h6">
                     {course.title}
                   </Typography>
@@ -129,7 +129,7 @@ export const OwnedCourses = () => {
                     sx={{ flex: 1, borderRadius: 2 }}
                     onClick={() => handleContinue(course.id)}
                   >
-                    {t("learning.continue")}
+                    {t("admin.editCourse")}
                   </Button>
                 </CardActions>
               </Card>

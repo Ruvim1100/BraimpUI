@@ -42,6 +42,8 @@ const lightTheme = createTheme({
             boxShadow: "none",
           },
         },
+        outlined: {
+        },
       },
     },
     MuiAppBar: {
@@ -75,13 +77,13 @@ const lightTheme = createTheme({
         },
       },
     },
-    MuiAvatar:{
+    MuiAvatar: {
       styleOverrides: {
         root: {
-          backgroundColor: "rgb(22, 176, 152)"
-        }
-      }
-    }
+          backgroundColor: "rgb(22, 176, 152)",
+        },
+      },
+    },
   },
 });
 

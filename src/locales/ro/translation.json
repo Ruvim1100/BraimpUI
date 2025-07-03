@@ -102,5 +102,9 @@
     "submit": "Trimite",
     "submissionSuccess": "Răspunsul a fost trimis cu succes!",
     "submissionError": "Trimiterea a eșuat. Vă rugăm să încercați din nou."
+  },
+    "admin": {
+    "editCourse": "Editați cursul",
+    "moduleLoadError": "Eroare la încărcarea modulelor"
   }
 }

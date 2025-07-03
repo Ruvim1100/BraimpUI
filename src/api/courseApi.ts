@@ -3,6 +3,7 @@ import type { EnrolledCourseListResponse, GetEnrolledCourseListParams } from "..
 import type { CourseListResponse, GetCourseListParams } from "../models/courses/getPagedCourses";
 import { apiRoutes } from "../constants/apiRoutes";
 import type { GetOwnedCourseListParams, OwnedCourseListResponse } from "../models/courses/getOwnedCourses";
+import type { CourseDetailsResponse } from "../models/courses/getCourseById";
 
 export const getEnrolledCourses = async (axios: AxiosInstance, params: GetEnrolledCourseListParams) : Promise<EnrolledCourseListResponse> => {
     const response = await axios.get<EnrolledCourseListResponse>(apiRoutes.courses.getEnrolled, {params});
@@ -18,3 +19,9 @@ export const getAllCourses = async(axios: AxiosInstance, params: GetCourseListPa
     const response = await axios.get<CourseListResponse>(apiRoutes.courses.getAllCourses, {params});
     return response.data;
 }
+
+export const getCourseById = async(axios: AxiosInstance, courseId: string) : Promise<CourseDetailsResponse> => {
+    const response = await axios.get<CourseDetailsResponse>(apiRoutes.courses.getCourseById(courseId),);
+    return response.data;
+}
+
