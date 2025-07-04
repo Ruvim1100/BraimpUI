@@ -9,7 +9,7 @@ export interface LessonDetailsResponse
     id: string,
     title: string,
     description?: string,
-    isPublished: string,
+    isPublished: boolean,
     sortIndex: number,
     files: FileResourceModel[]
 }

@@ -2,6 +2,13 @@ import { Box, Button, Divider, Skeleton, Typography } from "@mui/material";
 import { ModuleItem } from "./ModuleItem";
 import { useTranslation } from "react-i18next";
 import type { LessonLookupModel } from "../../../../../models/modules/getModules";
+import { useState } from "react";
+import { CreateModuleDialog } from "./CreateModuleDialog";
+import { useMutation } from "@tanstack/react-query";
+import { useParams } from "react-router-dom";
+import { createModule } from "../../../../../api/moduleApi";
+import useAxiosPrivate from "../../../../../hooks/useAxiosPrivate";
+import { queryClient } from "../../../../../api/react-query";
 
 export interface Module {
   id: string;
@@ -13,14 +20,44 @@ export interface Module {
 
 interface ModuleListProps {
   modules: Module[];
-  onLessonSelect: (lesson: {
-    id: string;
-    moduleId: string;
-  }) => void;
+  onLessonSelect: (lesson: { id: string; moduleId: string }) => void;
 }
 
 export const ModuleList = ({ modules, onLessonSelect }: ModuleListProps) => {
   const { t } = useTranslation();
+  const { courseId } = useParams();
+  const axios = useAxiosPrivate();
+  const [open, setOpen] = useState(false);
+
+  const createModuleMutation = useMutation({
+    mutationFn: (data: {
+      courseId: string;
+      title: string;
+      isPublished: boolean;
+    }) => {
+      const { courseId, ...params } = data;
+      return createModule(axios, courseId, params);
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({
+        queryKey: ["modules", courseId],
+      });
+      setOpen(false);
+    },
+    onError: (error) => {
+      console.error("Error deleting file:", error);
+      setOpen(false);
+    },
+  });
+
+const handleCreateModule = (data: { title: string; isPublished: boolean }) => {
+  if (!courseId) return;
+
+  createModuleMutation.mutate({
+    courseId,
+    ...data,
+  });
+};
 
   if (!modules) {
     return (
@@ -67,9 +104,20 @@ export const ModuleList = ({ modules, onLessonSelect }: ModuleListProps) => {
       </Box>
 
       <Divider sx={{ my: 2 }} />
-      <Button variant="contained" size="small" sx={{ width: "100%" }}>
+      <Button
+        onClick={() => setOpen(true)}
+        variant="contained"
+        size="small"
+        sx={{ width: "100%" }}
+      >
         + Добавить модуль
       </Button>
+
+      <CreateModuleDialog
+        open={open}
+        onClose={() => setOpen(false)}
+        onSubmit={handleCreateModule}
+      />
     </Box>
   );
 };

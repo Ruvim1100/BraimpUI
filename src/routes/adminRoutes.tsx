@@ -5,7 +5,7 @@ import { DashboardPage } from "../pages/admin/dashboard";
 import { CourseEditor } from "../pages/admin/сourseEditor";
 import { BuilderLayout } from "../pages/admin/сourseEditor/builder";
 import { BuilderEmpty } from "../pages/admin/сourseEditor/builder/Empty";
-import { LessonEditor } from "../pages/admin/сourseEditor/builder/lesson/LessonEditor";
+import { LessonEditorPage } from "../pages/admin/сourseEditor/builder/lesson/LessonEditorPage";
 
 const adminRoutes: RouteObject = {
   path: paths.admin.base,
@@ -21,7 +21,7 @@ const adminRoutes: RouteObject = {
           element: <BuilderLayout />,
           children: [
             { index: true, element: <BuilderEmpty /> },
-             { path: ":moduleId/:lessonId", element: <LessonEditor /> },
+             { path: ":moduleId/:lessonId", element: <LessonEditorPage /> },
             // { path: "quiz/:quizId", element: <QuizEditor /> },
             // { path: "assignment/:assignmentId", element: <AssignmentEditor /> },
           ],
